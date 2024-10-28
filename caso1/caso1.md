@@ -5,8 +5,8 @@
  - [module] modulo(name)
  - [view] vista [name]
 
-´´´sql
-    SELECT 
+```sql
+SELECT 
         CONCAT(p.first_name, '', p.middle_name, '', p.last_name, '', p.second_last_name) AS nombreCompleto,
         u.user AS usuario,
         r.name AS rol,
@@ -21,6 +21,7 @@
     INNER JOIN module m ON rm.module_id = m.id
     INNER JOIN module_view mv ON m.id = mv.module_id
     INNER JOIN view v ON mv.view_id = v.id
+```
 
 # Resultado
 ![Completo](img/Completa.png)
